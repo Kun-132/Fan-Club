@@ -8,8 +8,8 @@
     <style>
         /* Modern Sewing Theme */
         :root {
-            --primary: #6D4C41; /* Warm brown */
-            --secondary: #D81B60; /* Vibrant pink */
+            --primary: #202626; /* Warm brown */
+            --secondary: #27a844; /* Vibrant pink */
             --light: #FFF8F0; /* Cream */
             --dark: #3E2723; /* Dark brown */
             --accent: #26A69A; /* Teal */
@@ -250,31 +250,6 @@
         }
         
         /* Footer */
-        .sewing-footer {
-            background: var(--dark);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-            margin-top: 4rem;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 1.5rem 0;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: var(--accent);
-        }
         
         /* Email Popup Styles */
         .email-popup {
@@ -456,15 +431,6 @@
         </section>
     </main>
     
-    <footer class="sewing-footer">
-        <div class="footer-links">
-            <a href="#">About Us</a>
-            <a href="#">Workshops</a>
-            <a href="#">Contact</a>
-            <a href="#">Privacy Policy</a>
-        </div>
-        <p>&copy; 2023 Creative Stitches. All rights reserved.</p>
-    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

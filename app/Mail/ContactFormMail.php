@@ -26,8 +26,8 @@ class ContactFormMail extends Mailable
 
 public function build()
 {
-    return $this->from('phyo.cwb@gmail.com', 'Fan Club')  // Brevo-verified address
-               ->to('phyo.cwb@gmail.com')                     // Your personal inbox
+    return $this->from('fanclubteam01@gmail.com', 'Fan Club')  // Brevo-verified address
+               ->to('fanclubteam01@gmail.com')                     // Your personal inbox
                ->replyTo($this->email)                        // User's real email (e.g., user@gmail.com)
                ->subject("New Contact: {$this->name}")
                ->view('emails.contact-form');

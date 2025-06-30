@@ -17,7 +17,6 @@ class CountryContentSectionController extends Controller
         'krorma' => 'Krorma Handicraft',
         'visit' => 'Village Visit',
         'cashewnut' => 'Cashewnut Project',
-
     ];
 
     // List all content sections
@@ -41,15 +40,17 @@ class CountryContentSectionController extends Controller
         $data = $request->validate([
             'country_id'   => 'required|exists:countries,id',
             'title'        => 'required|string',
-            'paragraph'    => 'required|string',
+            'paragraph'    => 'nullable|string',
             'media_type'   => 'required|in:image,video',
             'image'        => 'nullable|image',
+            'image_2'      => 'nullable|image',
+            'image_3'      => 'nullable|image',
             'video_src'    => 'nullable|string',
             'status'       => 'required|in:show,hide',
             'detail_page'  => 'nullable|string|in:' . implode(',', array_keys($this->detailPages)),
         ]);
 
-        // Handle media logic
+        // Handle media upload
         if ($request->media_type === 'image' && $request->hasFile('image')) {
             $data['image'] = $request->file('image')->store('uploads', 'public');
             $data['video_src'] = null;
@@ -57,6 +58,14 @@ class CountryContentSectionController extends Controller
             $data['image'] = null;
         } else {
             return back()->withErrors(['media_type' => 'Please provide a valid media.']);
+        }
+
+        if ($request->hasFile('image_2')) {
+            $data['image_2'] = $request->file('image_2')->store('uploads', 'public');
+        }
+
+        if ($request->hasFile('image_3')) {
+            $data['image_3'] = $request->file('image_3')->store('uploads', 'public');
         }
 
         CountryContentSection::create($data);
@@ -81,8 +90,10 @@ class CountryContentSectionController extends Controller
         $data = $request->validate([
             'country_id'   => 'required|exists:countries,id',
             'title'        => 'required|string',
-            'paragraph'    => 'required|string',
+            'paragraph'    => 'nullable|string',
             'image'        => 'nullable|image',
+            'image_2'      => 'nullable|image',
+            'image_3'      => 'nullable|image',
             'video_src'    => 'nullable|string',
             'status'       => 'required|in:show,hide',
             'detail_page'  => 'nullable|string|in:' . implode(',', array_keys($this->detailPages)),
@@ -90,6 +101,14 @@ class CountryContentSectionController extends Controller
 
         if ($request->hasFile('image')) {
             $data['image'] = $request->file('image')->store('uploads', 'public');
+        }
+
+        if ($request->hasFile('image_2')) {
+            $data['image_2'] = $request->file('image_2')->store('uploads', 'public');
+        }
+
+        if ($request->hasFile('image_3')) {
+            $data['image_3'] = $request->file('image_3')->store('uploads', 'public');
         }
 
         $section->update($data);

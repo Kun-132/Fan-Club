@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 // routes/web.php
 Route::get('/test-email', function() {
     Mail::send([], [], function($message) {
-        $message->to('phyomo2904@gmail.com')
+        $message->to('fanclubteam01@gmail.com')
                 ->subject('Brevo Test')
                 ->html('<h1>This works!</h1>');
     });
@@ -82,6 +82,8 @@ Route::get('/krorma', fn() => view('front.krorma'));
 Route::get('/visit', fn() => view('front.visit'));
 Route::get('/cashewnut', fn() => view('front.cashewnut'));
 Route::get('/sewing', fn() => view('front.sewing'));
+Route::get('/campaing', fn() => view('front.campaing'));
+
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
