@@ -26,7 +26,7 @@ public function send(Request $request)
     ]);
 
     try {
-        Mail::to('phyo.cwb@gmail.com')->send(new ContactFormMail(
+        Mail::to('fanclubteam01@gmail.cm')->send(new ContactFormMail(
             $validated['name'],
             $validated['email'],
             $validated['message']

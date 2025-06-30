@@ -124,7 +124,7 @@ return [
     */
 
      'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'phyo.cwb@gmail.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'fanclubteam01@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'Fan Club'),
     ],
 

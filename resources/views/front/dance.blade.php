@@ -334,15 +334,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="main-nav">
-        <ul class="nav-links">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">NEWS</a></li>
-            <li><a href="#">PAGES</a></li>
-            <li><a href="#">CONTACT</a></li>
-            <li><a href="#">DANCE</a></li>
-        </ul>
-    </nav>
     
     <header class="performance-hero">
         <h1>Dance Performances Around The World</h1>
@@ -492,15 +483,6 @@
         </section>
     </main>
     
-    <footer class="performance-footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#">HOME</a>
-                <a href="#">CONTACT</a>
-                <a href="#">DANCE</a>
-            </div>
-            <p>© 2025 [Organization Name] - Connecting Cultures Through Dance</p>
-        </div>
-    </footer>
+   
 </body>
 </html>

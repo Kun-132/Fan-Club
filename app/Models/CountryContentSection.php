@@ -14,6 +14,8 @@ class CountryContentSection extends Model
         'title',
         'paragraph',
         'image',
+        'image_2',     // Add this
+        'image_3', 
         'video_src',
         'status',
         'detail_page',

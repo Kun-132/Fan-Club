@@ -18,7 +18,7 @@ class EmailController extends Controller
         ]);
 
         Mail::raw("From: {$validated['email']}\n\nMessage:\n{$validated['message']}", function ($message) use ($validated) {
-            $message->to('phyo.cwb@gmail.com') // CHANGE TO YOUR REAL EMAIL
+            $message->to('fanclubteam01@gmail.com') // CHANGE TO YOUR REAL EMAIL
                     ->subject("New Message")
                     ->replyTo($validated['email']);
         });

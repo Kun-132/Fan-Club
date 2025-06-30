@@ -240,27 +240,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="krama-hero">
-        <h1>The Krama: Cambodia's Cultural Tapestry</h1>
-        <p>Preserving the art and tradition of Cambodia's iconic checked scarf</p>
-    </header>
+    
     
     <main class="krama-container">
         <!-- Cultural Introduction -->
         <section class="cultural-section">
             <div class="section-header">
-                <h2>The Soul of Cambodian Textiles</h2>
-                <p>More than just fabric - a symbol of national identity</p>
+                <h2>三宅恭子さんのご協力で試作品を作ってみました</h2>
+                <p>"昔ながらの日本の知恵は反物を裁断しないで糸をほどけば1枚の布に戻すことができること。
+このあずま袋も2か所縫い合わせただけのシンプルなものですが、風呂敷のようにも使えますし、エコバッグにもなる優れものです"
+</p>
             </div>
             
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <p>The Krama, with its distinctive checkered pattern, has been woven into Cambodia's cultural fabric for centuries. This versatile textile serves as scarf, bag, baby carrier, and more, representing the ingenuity and resilience of the Cambodian people.</p>
-            </div>
             
             <div class="krama-grid">
                 <div class="krama-item">
                     <div class="krama-image">
-                        <img src="https://images.unsplash.com/photo-1579165466740-5049c5cd9574?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Traditional Krama weaving">
+                    <img src="{{ asset('img/krorma1.jpg') }}"
+                 alt="Fresh walnuts">
                     </div>
                     <div class="krama-caption">
                         <h3>Traditional Weaving</h3>
@@ -270,7 +267,7 @@
                 
                 <div class="krama-item">
                     <div class="krama-image">
-                        <img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Krama in daily life">
+                        <img src="{{ asset('img/miyakesan.jpg') }}" alt="Krama in daily life">
                     </div>
                     <div class="krama-caption">
                         <h3>Daily Utility</h3>
